@@ -82,6 +82,13 @@ function saySumtin() {
 
 var quotes = ["It's a funny thing about comin' home. Looks the same, smells the same, feels the same. You'll realize what's changed is you.", "Momma? Momma? Some days, I feel different than the day before.", "Some people, were born to sit by a river. Some get struck by lightning. Some have an ear for music. Some are artists. Some swim. Some know buttons. Some know Shakespeare. Some are mothers. And some people, dance.", "For what it's worth, it's never too late to be whoever you want to be."];
 
+var button2 = document.getElementById('random');
+button2.addEventListener('click', youDontSay);
+
+function youDontSay() {
+    var randQuote = quotes[Math.floor(Math.random()*quotes.length)];
+    document.getElementById('displayQuotes').innerHTML=randQuote
+}
 
 
 //9. Unlock the Secret to Financial Freedom
