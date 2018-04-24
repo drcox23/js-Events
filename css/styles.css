@@ -30,9 +30,9 @@ p{
 }
 
 
-#showmoney{
+/* #showmoney{
   display: none;
-}
+} */
 
 button{
   background-color: aqua;
@@ -41,3 +41,4 @@ button{
 h3{
   font-weight: bold;
 }
+

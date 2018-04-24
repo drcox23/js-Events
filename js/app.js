@@ -38,9 +38,15 @@ Next, create a function named valueMenu that will display your favorite items in
 var menuItems = ["McChicken", " McDouble", " Big Mac"];
 
 function valueMenu() {
-   var newMenu = document.createElement('p');
-   newMenu.innerHTML = menuItems;
-   menu.appendChild(newMenu);
+    for (var i = 0; i<menuItems.length; i++){
+       var pElem = document.createElement('li')
+       pElem.innerHTML = menuItems[i];
+       menu.appendChild(pElem);
+    }
+    
+//    var newMenu = document.createElement('p');
+//    newMenu.innerHTML = menuItems;
+//    menu.appendChild(newMenu);
 
 }
 
@@ -88,9 +94,25 @@ button2.addEventListener('click', youDontSay);
 function youDontSay() {
     var randQuote = quotes[Math.floor(Math.random()*quotes.length)];
     document.getElementById('displayQuotes').innerHTML=randQuote
-}
 
+}
 
 //9. Unlock the Secret to Financial Freedom
 /*Create an event listener that will show and hide the message when clicking on the button.
 */
+
+var button3 = document.getElementById('showHide');
+button3.addEventListener('click', showMeTheMoney);
+showmoney.style.display = 'none';
+
+function showMeTheMoney() {
+    // console.log ('moolah');
+    if (showmoney.style.display === 'none') {
+        showmoney.style.display = 'block';
+        button3.innerHTML = 'Hide My Secret';
+    } else {
+        showmoney.style.display = 'none';
+        button3.innerHTML = "Get Secret Now";
+    }
+}
+
